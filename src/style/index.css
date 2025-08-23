@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* background: #05080c; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    background-color: #0e0d13;
+    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+    /* opacity: 0.05; */
+    background-repeat: repeat;
+  }
+}
+.backdrop-blur-xs {
+  @apply bg-black/20 absolute inset-0 z-0;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 20px;
+}
+.block {
+  @apply bg-gradient-to-tr from-[#0f0f0f] via-[#141414] to-[#181826]
+    cursor-default text-white p-6 rounded-[20px] border-2 border-[#444444]
+    sm:p-12
+    transition-all duration-300 ease-out;
+}
+
+.block:hover {
+  @apply -translate-y-2 scale-[1.01] border-[#1c5564] shadow-xl shadow-[#00c8ff]/20;
+}
+
+.mainBorder {
+  @apply rounded-[20px] border-2 border-[#444444] bg-[#0e0e0e];
+}
+.title-xl {
+  @apply text-4xl md:text-4xl leading-tight font-grotesk font-light;
+}
+
+@theme {
+  --color-gradient: "#000";
+}
+.borderBtn {
+  @apply bg-gradient-to-tr from-[#0f0f0f] via-[#141414] to-[#181826]
+  border-2 border-[#444444];
+}
+.borderBtn:hover {
+  @apply -translate-y-2 scale-[1.01] border-[#e48950] shadow-xl shadow-[#d85909]/20
+   transition-all duration-300 ease-out;
+}
+
+@layer utilities {
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.1em);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+/*     background: linear-gradient(to right, #0db8aa, #fa5712);
+ */
+:root {
+  --my-gradient: linear-gradient(
+    to right,
+    rgba(37, 215, 235, 0.3),
+    rgba(247, 85, 10, 0.3)
+  );
+}
+
+/* animation */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* imgmain  */
+@keyframes lightOn {
+  0% {
+    opacity: 0;
+    filter: brightness(0.2) blur(30px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+.animate-light-on {
+  animation: lightOn 1.4s ease-out forwards;
+  backface-visibility: hidden;
+  will-change: opacity, filter;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  min-width: 100%;
+  animation: marquee 10s linear infinite;
+}
