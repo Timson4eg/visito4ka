@@ -19,7 +19,7 @@ const Profile = () => {
               href="mailto:timurnazipov@gmail.com"
               className="text-neutral-300 hover:text-white transition"
             >
-              timurnazipov@gmail.comя
+              timurnazipov@gmail.com
             </a>
           </div>
         </div>
