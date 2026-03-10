@@ -7,6 +7,7 @@ import tailwindIcon from "@/assets/icons/tailwind.svg";
 import Tsicon from "@/assets/icons/Ts.svg";
 import ViteIcon from "@/assets/icons/Vite.svg";
 import VsCodeIcon from "@/assets/icons/Vscode.svg";
+import VueIcon from "@/assets/icons/Vue.svg";
 
 const atributs = [
   { src: JsIcon, alt: "Js" },
@@ -20,6 +21,7 @@ const atributs = [
   { src: GitHubIcon, alt: "GitHub" },
   { src: VsCodeIcon, alt: "VsCode" },
   { src: AntIcon, alt: "Ant" },
+  { src: VueIcon, alt: "Vue" },
   // { src: ReactIcon, alt: "React",},
   // { src: ReactIcon, alt: "React",},
 ];

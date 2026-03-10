@@ -27,10 +27,9 @@ const Profile = () => {
 
       <div className="mt-5">
         <p className="text-neutral-200/90 leading-relaxed max-w-[60ch]">
-          Frontend Developer focused on building fast, accessible, and visually
-          engaging interfaces with React, TypeScript, and Tailwind. Passionate
-          about user experience, performance, and clean, maintainable code.
-          Always learning and improving.
+          Frontend Engineer building high-performance, AI-powered web apps with
+          React, Vue, and TypeScript. Focused on clean architecture, real-world
+          impact, and shipping things that actually work.
         </p>
       </div>
     </section>
